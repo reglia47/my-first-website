@@ -8,5 +8,6 @@ function openGoogleTranslate() {
     const googleTranslateUrl = 
     "https://translate.google.com/translate?sl=auto&tl=ja&u="
     + encodeURIComponent(currentUrl);
+    
     window.open(googleTranslateUrl, "_blank");
 }
