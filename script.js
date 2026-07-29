@@ -6,18 +6,21 @@ function showMessage(){
 
 function openGoogleTranslate() {
     const originalUrl = "https://reglia47.github.io/my-first-website/";
+
     const targetLanguage = document.getElementById("targetLanguage").value;
 
     if (targetLanguage === "zh-CN") {
-        window.location.href = originalUrl;
+        window.open(originalUrl, "_self");
         return;
     }
 
+    const freshUrl = originalUrl +"?v=" + Date.now();
+    
     const googleTranslateUrl = 
     "https://translate.google.com/translate?sl=auto&tl="
     + targetLanguage
     + "&u="
-    + encodeURIComponent(originalUrl);
+    + encodeURIComponent(freshUrl);
 
     window.open(googleTranslateUrl, "_self");
 }

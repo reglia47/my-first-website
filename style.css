@@ -41,3 +41,24 @@ footer{
     padding: 20px;
     color: #666;
 }
+
+.translate-box {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.translate-box label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.translate-box select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+}
