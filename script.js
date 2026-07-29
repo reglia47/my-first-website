@@ -5,10 +5,19 @@ function showMessage(){
 }
 
 function openGoogleTranslate() {
-    const currentUrl = "https://reglia47.github.io/my-first-website/";
+    const originalUrl = "https://reglia47.github.io/my-first-website/";
+    const targetLanguage = document.getElementById("targetLanguage").value;
+
+    if (targetLanguage === "zh-CN") {
+        window.location.href = originalUrl;
+        return;
+    }
+
     const googleTranslateUrl = 
-    "https://translate.google.com/translate?sl=auto&tl=ja&u="
-    + encodeURIComponent(currentUrl);
+    "https://translate.google.com/translate?sl=auto&tl="
+    + targetLanguage
+    + "&u="
+    + encodeURIComponent(originalUrl);
 
     window.open(googleTranslateUrl, "_self");
 }

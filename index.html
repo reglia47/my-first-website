@@ -9,7 +9,14 @@ content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <header>
-        <button onclick="openGoogleTranslate()">日本語</button>
+        <!-- <button onclick="openGoogleTranslate()">日本語</button> -->
+        <div class="translate-box">
+            <select id="targetLanguage" onchange="openGoogleTranslate()">
+                <option value="zh-CN">中文</option>
+                <option value="ja">日本語</option>
+                <option value="en">English</option>
+            </select>
+        </div>
         <h1>你好，我是 Seikou</h1>
         <p>这是我亲手制作的第一个网站</p>
     </header>
